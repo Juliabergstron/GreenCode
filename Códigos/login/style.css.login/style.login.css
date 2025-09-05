@@ -1,0 +1,475 @@
+/* Variáveis globais */
+:root {
+    --primary-color: #2E7D32;
+    --secondary-color: #1565C0;
+    --text-color: #333333;
+    --background-light: #F5F5F5;
+    --spacing-unit: 1rem;
+    --container-width: 1200px;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Layout base */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Header e Navegação */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+/* ==================== HERO DA PÁGINA DE CONTATO ==================== */
+.contact-hero-new {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 6rem 0 4rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title-contact {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-intro-new {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* ==================== DESTAQUES DA PÁGINA DE CONTATO ==================== */
+.login-info {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.login-section {
+  height: 100vh; /* tela cheia */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* divide em 2 metades */;
+  max-width: 1200px; /* Mantém bonito no desktop */
+  min-height: 600px; /* Garante altura mínima */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Lado esquerdo */
+.login-info {
+  background: linear-gradient(135deg, #2E7D32, var(--secondary-color)); /* degrade */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.login-info h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.login-info p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-login {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background:none;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Lado direito */
+.login-form {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 3rem;
+}
+
+.login-form h2 {
+  margin-bottom: 1rem;
+  color: #2E7D32;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.btn-submit {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background: #2E7D32;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+ text-align: center;
+ justify-content: center;
+  
+}
+
+.btn-submit:hover {
+  background: var(--secondary-color);
+   background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 992px) {
+    .contact-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-container {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title-contact {
+        font-size: 2.5rem;
+    }
+
+    .contact-intro-new {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos do Footer - mantenha estes estilos no seu CSS */
+.footer {
+    background-color: var(--text-color);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+/* ==================== FLIP DO CARD  ==================== */
+.flip-wrapper {
+  perspective: 2000px;
+  width: 1200px;   
+  height: 600px;   
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-face.back {
+  transform: rotateY(180deg);
+}
+
+
+/* Flip 3D só desativado no mobile, não em notebooks */
+@media (max-width: 768px) {
+  .flip-card,
+  .flip-face {
+    position: relative;
+    transform: none !important;
+    backface-visibility: visible;
+  }
+}
+
+
+/* ==================== RESPONSIVIDADE SOMENTE PARA CELULAR E TABLET ==================== */
+/* Por padrão, menu escondido em telas pequenas */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.show {
+    display: flex; /* aparece só quando clicar */
+  }
+
+
+  /* Login Container empilha */
+  .login-container {
+    grid-template-columns: 1fr;
+    width: 95%;
+    height: auto;
+  }
+
+  /* Flip simplificado no mobile */
+  .flip-wrapper {
+    width: 95%;
+    height: auto;
+  }
+  .flip-card,
+  .flip-face {
+    position: relative;
+    transform: none !important;
+    backface-visibility: visible;
+  }
+
+  /* Ajuste de textos */
+  .login-info h1 {
+    font-size: 2rem;
+  }
+
+  .login-info p {
+    font-size: 1rem;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Telas muito pequenas */
+  .login-info {
+    padding: 1rem;
+  }
+
+  .login-form {
+    padding: 1rem;
+  }
+
+  .btn-login, .btn-submit {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/* Só em telas menores que 768px */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* mostra botão */
+  }
+
+  .nav-menu {
+    display: none; /* esconde menu por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* abaixo do header */
+    right: 0;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.show {
+    display: flex; /* exibe quando clicar */
+  }
+}
+ /* MOBILE: mostrar só um container por vez */
+@media (max-width: 768px) {
+  .flip-card {
+    transform: none !important;
+  }
+
+  .flip-face {
+    display: none; /* esconde tudo por padrão */
+    position: relative;
+    transform: none !important;
+    backface-visibility: visible;
+  }
+
+  .flip-face.active {
+    display: block; /* só o ativo aparece */
+  }
+}
+/* Corrigir espaçamento e altura no mobile */
+@media (max-width: 768px) {
+  .login-section {
+    min-height: auto; /* Permite ajustar altura pelo conteúdo */
+    height: auto;
+    padding: 100px 0 50px; /* espaço para navbar fixa + rodapé */
+  }
+
+  main {
+    padding-top: 80px; /* espaço para a navbar fixa */
+  }
+}

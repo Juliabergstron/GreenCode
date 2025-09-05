@@ -1,0 +1,330 @@
+/* Variáveis do Perfil */
+:root {
+  --perfil-primary: #2E7D32;
+  --perfil-secondary: #1565C0;
+  --perfil-text: #333333;
+  --perfil-bg-light: #F5F5F5;
+  --perfil-spacing: 1rem;
+  --perfil-container: 1200px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--perfil-text);
+  background-color: var(--perfil-bg-light);
+}
+
+/* Header */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  max-width: var(--perfil-container);
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--perfil-primary);
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--perfil-text);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--perfil-primary);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.show {
+    display: flex; /* aparece só quando clicar */
+  }
+
+}
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--perfil-primary);
+}
+/* Só em telas menores que 768px */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* mostra botão */
+  }
+
+  .nav-menu {
+    display: none; /* esconde menu por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* abaixo do header */
+    right: 0;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.show {
+    display: flex; /* exibe quando clicar */
+  }
+}
+
+  main {
+    padding-top: 80px; /* espaço para a navbar fixa */
+  }
+
+
+/* Container Perfil */
+.perfil-section {
+  display: flex;
+  margin-top: 20px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 80vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Faixa lateral com degradê */
+.perfil-sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, var(--perfil-primary), var(--perfil-secondary));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.perfil-sidebar h2 {
+
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.foto-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.nome-usuario {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.btn-edit-foto {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: var(--perfil-primary);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Conteúdo perfil */
+.perfil-content {
+  flex: 1;
+  padding: 2rem 3rem;
+}
+
+/* Botões tipo abas */
+.perfil-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+.perfil-tabs .tab-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background-color: var(--perfil-primary);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.perfil-tabs .tab-btn.active,
+.perfil-tabs .tab-btn:hover {
+  background-color: var(--perfil-secondary);
+}
+
+/* Conteúdo das abas */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Formulário centralizado */
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.perfil-form label {
+  font-weight: 500;
+}
+
+.perfil-form input {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Botão submit */
+.btn-submit {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--perfil-primary);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: var(--perfil-secondary);
+}
+
+/* === Responsividade === */
+
+/* Tablet (largura até 992px) */
+@media (max-width: 992px) {
+  .perfil-section {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 120px; /* ainda abaixo do header fixo */
+  }
+
+  .perfil-sidebar {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .perfil-sidebar h2 {
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfil-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .perfil-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Celular (largura até 600px) */
+@media (max-width: 600px) {
+  .perfil-section {
+    margin-top: 100px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .perfil-sidebar {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .perfil-sidebar h2 {
+    font-size: 1.8rem;
+  }
+
+  .foto-container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .perfil-content {
+    padding: 1rem;
+  }
+
+  .perfil-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .perfil-tabs .tab-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem;
+  }
+
+  .perfil-form {
+    width: 100%;
+  }
+}
+

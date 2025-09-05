@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - GreenCode</title>
+  <link rel="stylesheet" href="../perfil/perfil.css/carrinho.css">
+  <script src="../perfil/js.perfil/login.js"></script>
+  <script src="../perfil/js.perfil/fotoperfil.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+   <header class="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav-logo">GreenCode</a>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="../index/index.html" class="nav-link">Início</a></li>
+                <li><a href="../sobre/sobre.html" class="nav-link">Sobre Nós</a></li>
+                <li><a href="../serviços/servicos.html" class="nav-link">Serviços</a></li>
+                <li><a href="../programa-escolas/programa-escolas.html" class="nav-link">Programa Escolas</a></li>
+                <li><a href="../eventos/eventos.html" class="nav-link">Eventos</a></li>
+                <li><a href="../contato/contato.html" class="nav-link">Contato</a></li>
+                <li><a href="../login/login.html" class="nav-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- Container Perfil -->
+  <main>
+    <section class="perfil-section">
+      <!-- Faixa lateral com degradê -->
+      <div class="perfil-sidebar">
+        <h2>Carrinho</h2>
+        
+        </div>
+      </div>
+
+      <!-- Conteúdo principal -->
+      <div class="perfil-content">
+        <!-- Botões de navegação do perfil -->
+        <div class="perfil-tabs">
+           <a class="tab-btn" href="perfil.html" >Perfil</a>
+          <a class="tab-btn " href="seus produtos.html" >Seus Produtos</a>
+          <a class="tab-btn active" href=" carrinho.html" >Carrinho</a>
+        </div>
+
+        <!-- Conteúdo das abas -->
+       <div id="produtos" class="tab-content">
+  <h3>Produtos Adicionados</h3>
+        </div>
+        
+ <a class="Adicionados" href="../serviços/servicos.html" > Adicionar ao Carrinho +</a>
+        
+      </div>
+    </section>
+  </main>
+  
+
+   <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+</body>
+</html>
